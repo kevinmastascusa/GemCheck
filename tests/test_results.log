@@ -1,0 +1,238 @@
+2025-09-05 15:32:02,777 - conftest - INFO - ================================================================================
+2025-09-05 15:32:02,777 - conftest - INFO - STARTING GEMCHECK TEST SESSION
+2025-09-05 15:32:02,777 - conftest - INFO - ================================================================================
+2025-09-05 15:32:02,778 - conftest - INFO - Python path: ['C:\\Users\\dlaev\\Personal Projects\\PSA PREGRADER', 'C:\\Users\\dlaev\\Personal Projects\\PSA PREGRADER\\tests', 'C:\\Users\\dlaev\\Personal Projects\\PSA PREGRADER', 'C:\\Python313\\python313.zip', 'C:\\Python313\\DLLs', 'C:\\Python313\\Lib', 'C:\\Python313', 'C:\\Users\\dlaev\\AppData\\Roaming\\Python\\Python313\\site-packages', 'C:\\Python313\\Lib\\site-packages']
+2025-09-05 15:32:02,778 - conftest - INFO - Project root: C:\Users\dlaev\Personal Projects\PSA PREGRADER
+2025-09-05 15:32:02,959 - app.metrics.centering - INFO - Centering score: 0.00 (error: 0.2500, threshold: 0.25)
+2025-09-05 15:32:02,960 - app.metrics.centering - INFO - Centering score: 50.00 (error: 0.1250, threshold: 0.25)
+2025-09-05 15:32:02,961 - app.metrics.centering - INFO - Centering score: 0.00 (error: 0.5000, threshold: 0.25)
+2025-09-05 15:32:02,970 - app.metrics.centering - INFO - Detected inner frame: (29, 39, 240, 320)
+2025-09-05 15:32:02,972 - test_centering - INFO - Testing centering analysis with perfect centering
+2025-09-05 15:32:02,973 - test_centering - DEBUG - Created test image: (400, 300, 3)
+2025-09-05 15:32:02,975 - app.metrics.centering - INFO - Detected inner frame: (29, 39, 240, 320)
+2025-09-05 15:32:02,975 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(29), 'right_px': np.int32(31), 'top_px': np.int32(39), 'bottom_px': np.int32(41), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(240), 'frame_height_px': np.int32(320), 'left_mm': np.float64(6.09), 'right_mm': np.float64(6.51), 'top_mm': np.float64(8.58), 'bottom_mm': np.float64(9.02)}
+2025-09-05 15:32:02,976 - app.metrics.centering - INFO - Calculated centering errors: H=0.0333, V=0.0250, C=0.0295
+2025-09-05 15:32:02,976 - app.metrics.centering - INFO - Centering score: 88.21 (error: 0.0295, threshold: 0.25)
+2025-09-05 15:32:02,976 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:02,976 - test_centering - INFO - Centering analysis result: score=88.21, h_error=0.033, v_error=0.025
+2025-09-05 15:32:02,976 - test_centering - DEBUG - Result type check passed
+2025-09-05 15:32:02,976 - test_centering - DEBUG - Score check passed: 88.21488698022421 >= 70.0
+2025-09-05 15:32:02,976 - test_centering - DEBUG - Horizontal error check passed: 0.03333333333333333 < 0.3
+2025-09-05 15:32:02,976 - test_centering - DEBUG - Vertical error check passed: 0.025 < 0.3
+2025-09-05 15:32:02,976 - test_centering - DEBUG - Combined error check passed: 0.02946278254943948 < 0.5
+2025-09-05 15:32:02,977 - test_centering - INFO - Perfect centering test completed successfully
+2025-09-05 15:32:02,980 - app.metrics.centering - INFO - Detected inner frame: (9, 19, 240, 320)
+2025-09-05 15:32:02,980 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(9), 'right_px': np.int32(51), 'top_px': np.int32(19), 'bottom_px': np.int32(61), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(240), 'frame_height_px': np.int32(320), 'left_mm': np.float64(1.89), 'right_mm': np.float64(10.709999999999999), 'top_mm': np.float64(4.18), 'bottom_mm': np.float64(13.42)}
+2025-09-05 15:32:02,980 - app.metrics.centering - INFO - Calculated centering errors: H=0.7000, V=0.5250, C=0.6187
+2025-09-05 15:32:02,981 - app.metrics.centering - INFO - Centering score: 0.00 (error: 0.6187, threshold: 0.25)
+2025-09-05 15:32:02,981 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:02,984 - app.metrics.centering - WARNING - No lines detected for frame detection
+2025-09-05 15:32:02,984 - app.metrics.centering - WARNING - Using fallback frame estimation
+2025-09-05 15:32:02,984 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int64(30), 'right_px': np.int64(30), 'top_px': np.int64(40), 'bottom_px': np.int64(40), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int64(240), 'frame_height_px': np.int64(320), 'left_mm': np.float64(6.3), 'right_mm': np.float64(6.3), 'top_mm': np.float64(8.8), 'bottom_mm': np.float64(8.8)}
+2025-09-05 15:32:02,985 - app.metrics.centering - INFO - Calculated centering errors: H=0.0000, V=0.0000, C=0.0000
+2025-09-05 15:32:02,985 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:02,989 - app.metrics.centering - INFO - Detected inner frame: (19, 29, 240, 320)
+2025-09-05 15:32:02,990 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(19), 'right_px': np.int32(41), 'top_px': np.int32(29), 'bottom_px': np.int32(51), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(240), 'frame_height_px': np.int32(320), 'left_mm': np.float64(3.9899999999999998), 'right_mm': np.float64(8.61), 'top_mm': np.float64(6.38), 'bottom_mm': np.float64(11.22)}
+2025-09-05 15:32:02,990 - app.metrics.centering - INFO - Calculated centering errors: H=0.3667, V=0.2750, C=0.3241
+2025-09-05 15:32:02,990 - app.metrics.centering - INFO - Centering score: 0.00 (error: 0.3241, threshold: 0.1)
+2025-09-05 15:32:02,990 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:02,993 - app.metrics.centering - INFO - Detected inner frame: (19, 29, 240, 320)
+2025-09-05 15:32:02,993 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(19), 'right_px': np.int32(41), 'top_px': np.int32(29), 'bottom_px': np.int32(51), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(240), 'frame_height_px': np.int32(320), 'left_mm': np.float64(3.9899999999999998), 'right_mm': np.float64(8.61), 'top_mm': np.float64(6.38), 'bottom_mm': np.float64(11.22)}
+2025-09-05 15:32:02,994 - app.metrics.centering - INFO - Calculated centering errors: H=0.3667, V=0.2750, C=0.3241
+2025-09-05 15:32:02,994 - app.metrics.centering - INFO - Centering score: 35.18 (error: 0.3241, threshold: 0.5)
+2025-09-05 15:32:02,994 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:02,995 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int64(50), 'right_px': np.int64(50), 'top_px': np.int64(60), 'bottom_px': np.int64(60), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int64(200), 'frame_height_px': np.int64(280), 'left_mm': np.float64(10.5), 'right_mm': np.float64(10.5), 'top_mm': np.float64(13.2), 'bottom_mm': np.float64(13.2)}
+2025-09-05 15:32:02,996 - app.metrics.centering - INFO - Calculated centering errors: H=0.0000, V=0.0000, C=0.0000
+2025-09-05 15:32:02,997 - app.metrics.centering - INFO - Calculated centering errors: H=0.6667, V=0.5000, C=0.5893
+2025-09-05 15:32:02,999 - app.metrics.centering - WARNING - No lines detected for frame detection
+2025-09-05 15:32:02,999 - app.metrics.centering - WARNING - Using fallback frame estimation
+2025-09-05 15:32:02,999 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int64(5), 'right_px': np.int64(5), 'top_px': np.int64(5), 'bottom_px': np.int64(5), 'card_width_px': 50, 'card_height_px': 50, 'frame_width_px': np.int64(40), 'frame_height_px': np.int64(40), 'left_mm': np.float64(6.3), 'right_mm': np.float64(6.3), 'top_mm': np.float64(8.8), 'bottom_mm': np.float64(8.8)}
+2025-09-05 15:32:03,000 - app.metrics.centering - INFO - Calculated centering errors: H=0.0000, V=0.0000, C=0.0000
+2025-09-05 15:32:03,000 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:03,004 - app.metrics.centering - WARNING - No lines detected for frame detection
+2025-09-05 15:32:03,004 - app.metrics.centering - WARNING - Using fallback frame estimation
+2025-09-05 15:32:03,004 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int64(40), 'right_px': np.int64(40), 'top_px': np.int64(50), 'bottom_px': np.int64(50), 'card_width_px': 400, 'card_height_px': 500, 'frame_width_px': np.int64(320), 'frame_height_px': np.int64(400), 'left_mm': np.float64(6.3), 'right_mm': np.float64(6.3), 'top_mm': np.float64(8.799999999999999), 'bottom_mm': np.float64(8.799999999999999)}
+2025-09-05 15:32:03,004 - app.metrics.centering - INFO - Calculated centering errors: H=0.0000, V=0.0000, C=0.0000
+2025-09-05 15:32:03,005 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:03,028 - app.metrics.centering - INFO - Detected inner frame: (30, 40, 239, 319)
+2025-09-05 15:32:03,028 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(30), 'right_px': np.int32(31), 'top_px': np.int32(40), 'bottom_px': np.int32(41), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(239), 'frame_height_px': np.int32(319), 'left_mm': np.float64(6.3), 'right_mm': np.float64(6.51), 'top_mm': np.float64(8.8), 'bottom_mm': np.float64(9.02)}
+2025-09-05 15:32:03,028 - app.metrics.centering - INFO - Calculated centering errors: H=0.0164, V=0.0123, C=0.0145
+2025-09-05 15:32:03,028 - app.metrics.centering - INFO - Centering score: 94.20 (error: 0.0145, threshold: 0.25)
+2025-09-05 15:32:03,028 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:03,029 - app.metrics.centering - INFO - Detected inner frame: (29, 198, 240, 3)
+2025-09-05 15:32:03,030 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(29), 'right_px': np.int32(31), 'top_px': np.int32(198), 'bottom_px': np.int32(199), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(240), 'frame_height_px': np.int32(3), 'left_mm': np.float64(6.09), 'right_mm': np.float64(6.51), 'top_mm': np.float64(43.56), 'bottom_mm': np.float64(43.78)}
+2025-09-05 15:32:03,030 - app.metrics.centering - INFO - Calculated centering errors: H=0.0333, V=0.0025, C=0.0236
+2025-09-05 15:32:03,030 - app.metrics.centering - INFO - Centering score: 90.55 (error: 0.0236, threshold: 0.25)
+2025-09-05 15:32:03,030 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:03,036 - app.metrics.centering - INFO - Detected inner frame: (29, 39, 240, 320)
+2025-09-05 15:32:03,036 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(29), 'right_px': np.int32(31), 'top_px': np.int32(39), 'bottom_px': np.int32(41), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(240), 'frame_height_px': np.int32(320), 'left_mm': np.float64(6.09), 'right_mm': np.float64(6.51), 'top_mm': np.float64(8.58), 'bottom_mm': np.float64(9.02)}
+2025-09-05 15:32:03,036 - app.metrics.centering - INFO - Calculated centering errors: H=0.0333, V=0.0250, C=0.0295
+2025-09-05 15:32:03,036 - app.metrics.centering - INFO - Centering score: 88.21 (error: 0.0295, threshold: 0.25)
+2025-09-05 15:32:03,037 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:03,038 - app.metrics.centering - INFO - Detected inner frame: (9, 19, 240, 320)
+2025-09-05 15:32:03,038 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(9), 'right_px': np.int32(51), 'top_px': np.int32(19), 'bottom_px': np.int32(61), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(240), 'frame_height_px': np.int32(320), 'left_mm': np.float64(1.89), 'right_mm': np.float64(10.709999999999999), 'top_mm': np.float64(4.18), 'bottom_mm': np.float64(13.42)}
+2025-09-05 15:32:03,038 - app.metrics.centering - INFO - Calculated centering errors: H=0.7000, V=0.5250, C=0.6187
+2025-09-05 15:32:03,038 - app.metrics.centering - INFO - Centering score: 0.00 (error: 0.6187, threshold: 0.25)
+2025-09-05 15:32:03,038 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:03,040 - app.metrics.centering - INFO - Detected inner frame: (4, 9, 195, 290)
+2025-09-05 15:32:03,040 - app.metrics.centering - DEBUG - Calculated margins: {'left_px': np.int32(4), 'right_px': np.int32(101), 'top_px': np.int32(9), 'bottom_px': np.int32(101), 'card_width_px': 300, 'card_height_px': 400, 'frame_width_px': np.int32(195), 'frame_height_px': np.int32(290), 'left_mm': np.float64(0.84), 'right_mm': np.float64(21.21), 'top_mm': np.float64(1.98), 'bottom_mm': np.float64(22.22)}
+2025-09-05 15:32:03,041 - app.metrics.centering - INFO - Calculated centering errors: H=0.9238, V=0.8364, C=0.8812
+2025-09-05 15:32:03,041 - app.metrics.centering - INFO - Centering score: 0.00 (error: 0.8812, threshold: 0.25)
+2025-09-05 15:32:03,041 - app.metrics.centering - INFO - Centering analysis completed successfully
+2025-09-05 15:32:03,180 - app.metrics.edges_corners - INFO - Edge whitening: 0.00% of edge affected
+2025-09-05 15:32:03,185 - app.metrics.edges_corners - INFO - Edge whitening: 0.00% of edge affected
+2025-09-05 15:32:03,190 - app.metrics.edges_corners - INFO - Edge whitening: 0.00% of edge affected
+2025-09-05 15:32:03,191 - app.metrics.edges_corners - INFO - Edge analysis completed successfully
+2025-09-05 15:32:03,195 - app.metrics.edges_corners - INFO - Edge whitening: 0.00% of edge affected
+2025-09-05 15:32:03,196 - app.metrics.edges_corners - INFO - Edge analysis completed successfully
+2025-09-05 15:32:03,201 - app.metrics.edges_corners - INFO - Edge whitening: 0.00% of edge affected
+2025-09-05 15:32:03,202 - app.metrics.edges_corners - INFO - Edge analysis completed successfully
+2025-09-05 15:32:03,204 - app.metrics.edges_corners - INFO - Corner analysis completed, minimum score: 18.80
+2025-09-05 15:32:03,206 - app.metrics.edges_corners - INFO - Corner analysis completed, minimum score: 35.31
+2025-09-05 15:32:03,208 - app.metrics.edges_corners - INFO - Corner analysis completed, minimum score: 25.56
+2025-09-05 15:32:03,212 - app.metrics.edges_corners - INFO - Edge whitening: 0.00% of edge affected
+2025-09-05 15:32:03,213 - app.metrics.edges_corners - INFO - Edge analysis completed successfully
+2025-09-05 15:32:03,214 - app.metrics.edges_corners - INFO - Corner analysis completed, minimum score: 18.80
+2025-09-05 15:32:03,217 - app.metrics.edges_corners - INFO - Edge whitening: 0.00% of edge affected
+2025-09-05 15:32:03,219 - app.metrics.edges_corners - INFO - Edge analysis completed successfully
+2025-09-05 15:32:03,219 - app.metrics.edges_corners - INFO - Corner analysis completed, minimum score: 18.80
+2025-09-05 15:32:03,231 - app.metrics.glare - INFO - Glare penalty: 0.00 points for 0.00% glare
+2025-09-05 15:32:03,232 - app.metrics.glare - INFO - Glare penalty: 5.00 points for 5.00% glare
+2025-09-05 15:32:03,233 - app.metrics.glare - INFO - Glare penalty: 10.00 points for 15.00% glare
+2025-09-05 15:32:03,234 - app.metrics.glare - INFO - Glare penalty: 5.00 points for 5.00% glare
+2025-09-05 15:32:03,236 - app.metrics.glare - INFO - Found 0 significant glare regions
+2025-09-05 15:32:03,236 - app.metrics.glare - INFO - Glare analysis completed: 0.00% affected, penalty: 0.00
+2025-09-05 15:32:03,240 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,240 - app.metrics.glare - INFO - Glare penalty: 2.35 points for 2.35% glare
+2025-09-05 15:32:03,240 - app.metrics.glare - INFO - Glare analysis completed: 2.35% affected, penalty: 2.35
+2025-09-05 15:32:03,243 - app.metrics.glare - INFO - Found 3 significant glare regions
+2025-09-05 15:32:03,243 - app.metrics.glare - INFO - Glare penalty: 3.27 points for 3.27% glare
+2025-09-05 15:32:03,243 - app.metrics.glare - INFO - Glare analysis completed: 3.27% affected, penalty: 3.27
+2025-09-05 15:32:03,246 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,246 - app.metrics.glare - INFO - Glare penalty: 3.52 points for 2.35% glare
+2025-09-05 15:32:03,246 - app.metrics.glare - INFO - Glare analysis completed: 2.35% affected, penalty: 3.52
+2025-09-05 15:32:03,249 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,249 - app.metrics.glare - INFO - Glare penalty: 10.00 points for 100.00% glare
+2025-09-05 15:32:03,249 - app.metrics.glare - INFO - Glare analysis completed: 100.00% affected, penalty: 10.00
+2025-09-05 15:32:03,250 - app.metrics.glare - INFO - Found 0 significant glare regions
+2025-09-05 15:32:03,250 - app.metrics.glare - INFO - Glare analysis completed: 0.00% affected, penalty: 0.00
+2025-09-05 15:32:03,250 - app.metrics.glare - INFO - Found 0 significant glare regions
+2025-09-05 15:32:03,250 - app.metrics.glare - INFO - Glare analysis completed: 0.00% affected, penalty: 0.00
+2025-09-05 15:32:03,254 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,254 - app.metrics.glare - INFO - Glare penalty: 2.35 points for 2.35% glare
+2025-09-05 15:32:03,254 - app.metrics.glare - INFO - Glare analysis completed: 2.35% affected, penalty: 2.35
+2025-09-05 15:32:03,255 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,255 - app.metrics.glare - INFO - Glare penalty: 2.35 points for 2.35% glare
+2025-09-05 15:32:03,255 - app.metrics.glare - INFO - Glare analysis completed: 2.35% affected, penalty: 2.35
+2025-09-05 15:32:03,256 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,256 - app.metrics.glare - INFO - Glare penalty: 2.35 points for 2.35% glare
+2025-09-05 15:32:03,256 - app.metrics.glare - INFO - Glare analysis completed: 2.35% affected, penalty: 2.35
+2025-09-05 15:32:03,260 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,260 - app.metrics.glare - INFO - Glare penalty: 10.00 points for 50.68% glare
+2025-09-05 15:32:03,260 - app.metrics.glare - INFO - Glare analysis completed: 50.68% affected, penalty: 10.00
+2025-09-05 15:32:03,265 - app.metrics.glare - INFO - Found 3 significant glare regions
+2025-09-05 15:32:03,265 - app.metrics.glare - INFO - Glare penalty: 10.00 points for 12.32% glare
+2025-09-05 15:32:03,265 - app.metrics.glare - INFO - Glare analysis completed: 12.32% affected, penalty: 10.00
+2025-09-05 15:32:03,267 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,268 - app.metrics.glare - INFO - Glare penalty: 10.00 points for 100.00% glare
+2025-09-05 15:32:03,268 - app.metrics.glare - INFO - Glare analysis completed: 100.00% affected, penalty: 10.00
+2025-09-05 15:32:03,269 - app.metrics.glare - INFO - Found 1 significant glare regions
+2025-09-05 15:32:03,269 - app.metrics.glare - INFO - Glare penalty: 10.00 points for 100.00% glare
+2025-09-05 15:32:03,269 - app.metrics.glare - INFO - Glare analysis completed: 100.00% affected, penalty: 10.00
+2025-09-05 15:32:03,270 - app.scoring - INFO - Sub-scores calculated: C=100.0, E=100.0, Co=100.0, S=100.0
+2025-09-05 15:32:03,272 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,272 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,274 - app.metrics.centering - INFO - Centering score: 0.00 (error: 0.3900, threshold: 0.25)
+2025-09-05 15:32:03,274 - app.scoring - INFO - Sub-scores calculated: C=0.0, E=0.0, Co=50.0, S=80.0
+2025-09-05 15:32:03,275 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,275 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,278 - app.scoring - INFO - Assigned grade: NM-Mint 8 (overall: 89.1, min_sub: 85.0)
+2025-09-05 15:32:03,278 - app.scoring - INFO - Overall score calculated: 89.10 -> NM-Mint 8 (confidence: 0.90)
+2025-09-05 15:32:03,279 - app.scoring - INFO - Assigned grade: Excellent 6 (overall: 90.0, min_sub: 50.0)
+2025-09-05 15:32:03,279 - app.scoring - INFO - Overall score calculated: 90.00 -> Excellent 6 (confidence: 0.90)
+2025-09-05 15:32:03,280 - app.scoring - INFO - Assigned grade: Authentic 1 (overall: 0.0, min_sub: 0.0)
+2025-09-05 15:32:03,281 - app.scoring - INFO - Overall score calculated: 0.00 -> Authentic 1 (confidence: 0.98)
+2025-09-05 15:32:03,281 - app.scoring - INFO - Assigned grade: Gem Mint 10 (overall: 100.0, min_sub: 100.0)
+2025-09-05 15:32:03,281 - app.scoring - INFO - Overall score calculated: 100.00 -> Gem Mint 10 (confidence: 0.90)
+2025-09-05 15:32:03,282 - app.scoring - INFO - Assigned grade: Gem Mint 10 (overall: 98.0, min_sub: 97.0)
+2025-09-05 15:32:03,283 - app.scoring - INFO - Assigned grade: Mint 9 (overall: 93.5, min_sub: 92.0)
+2025-09-05 15:32:03,284 - app.scoring - INFO - Assigned grade: Authentic 1 (overall: 42.5, min_sub: 35.0)
+2025-09-05 15:32:03,285 - app.scoring - INFO - Assigned grade: Excellent 6 (overall: 95.0, min_sub: 30.0)
+2025-09-05 15:32:03,286 - app.scoring - INFO - Sub-scores calculated: C=100.0, E=100.0, Co=100.0, S=100.0
+2025-09-05 15:32:03,286 - app.scoring - INFO - Assigned grade: Gem Mint 10 (overall: 100.0, min_sub: 100.0)
+2025-09-05 15:32:03,286 - app.scoring - INFO - Overall score calculated: 100.00 -> Gem Mint 10 (confidence: 0.90)
+2025-09-05 15:32:03,286 - app.scoring - INFO - Assigned grade: Gem Mint 10 (overall: 100.0, min_sub: 100.0)
+2025-09-05 15:32:03,288 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,288 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,288 - app.scoring - INFO - Assigned grade: Near Mint 7 (overall: 81.8, min_sub: 74.0)
+2025-09-05 15:32:03,288 - app.scoring - INFO - Overall score calculated: 81.80 -> Near Mint 7 (confidence: 0.90)
+2025-09-05 15:32:03,288 - app.scoring - INFO - Assigned grade: Near Mint 7 (overall: 81.8, min_sub: 74.0)
+2025-09-05 15:32:03,289 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,290 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,290 - app.scoring - INFO - Assigned grade: Near Mint 7 (overall: 81.8, min_sub: 74.0)
+2025-09-05 15:32:03,290 - app.scoring - INFO - Overall score calculated: 81.80 -> Near Mint 7 (confidence: 0.90)
+2025-09-05 15:32:03,290 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,290 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,290 - app.scoring - INFO - Assigned grade: Near Mint 7 (overall: 81.8, min_sub: 74.0)
+2025-09-05 15:32:03,290 - app.scoring - INFO - Overall score calculated: 81.80 -> Near Mint 7 (confidence: 0.90)
+2025-09-05 15:32:03,290 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,290 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,290 - app.scoring - INFO - Assigned grade: Near Mint 7 (overall: 81.8, min_sub: 74.0)
+2025-09-05 15:32:03,290 - app.scoring - INFO - Overall score calculated: 81.80 -> Near Mint 7 (confidence: 0.90)
+2025-09-05 15:32:03,290 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,291 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,291 - app.scoring - INFO - Assigned grade: Near Mint 7 (overall: 81.8, min_sub: 74.0)
+2025-09-05 15:32:03,291 - app.scoring - INFO - Overall score calculated: 81.80 -> Near Mint 7 (confidence: 0.90)
+2025-09-05 15:32:03,291 - app.metrics.centering - INFO - Centering score: 74.00 (error: 0.0650, threshold: 0.25)
+2025-09-05 15:32:03,291 - app.scoring - INFO - Sub-scores calculated: C=74.0, E=75.0, Co=82.0, S=98.0
+2025-09-05 15:32:03,291 - app.scoring - INFO - Assigned grade: Near Mint 7 (overall: 81.8, min_sub: 74.0)
+2025-09-05 15:32:03,291 - app.scoring - INFO - Overall score calculated: 81.80 -> Near Mint 7 (confidence: 0.90)
+2025-09-05 15:32:03,293 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,294 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,296 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,299 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,300 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,301 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,301 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,302 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,303 - app.metrics.surface - INFO - Detected 2 print lines
+2025-09-05 15:32:03,303 - app.metrics.surface - INFO - Surface analysis completed: 2 total defects
+2025-09-05 15:32:03,305 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,305 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,305 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,307 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,308 - app.metrics.surface - INFO - Detected 2 print lines
+2025-09-05 15:32:03,309 - app.metrics.surface - INFO - Surface analysis completed: 2 total defects
+2025-09-05 15:32:03,310 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,311 - app.metrics.surface - INFO - Detected 1 print lines
+2025-09-05 15:32:03,311 - app.metrics.surface - INFO - Surface analysis completed: 1 total defects
+2025-09-05 15:32:03,313 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,314 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,314 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,315 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,315 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,315 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,316 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,317 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,317 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,317 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,318 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,318 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,320 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,321 - app.metrics.surface - INFO - Detected 2 print lines
+2025-09-05 15:32:03,321 - app.metrics.surface - INFO - Surface analysis completed: 2 total defects
+2025-09-05 15:32:03,326 - app.metrics.surface - INFO - Detected 1 scratch regions
+2025-09-05 15:32:03,330 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,330 - app.metrics.surface - INFO - Surface analysis completed: 1 total defects
+2025-09-05 15:32:03,332 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,334 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,334 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,335 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,336 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,336 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,336 - app.metrics.surface - INFO - Detected 0 scratch regions
+2025-09-05 15:32:03,337 - app.metrics.surface - INFO - Detected 0 print lines
+2025-09-05 15:32:03,337 - app.metrics.surface - INFO - Surface analysis completed: 0 total defects
+2025-09-05 15:32:03,338 - conftest - INFO - ================================================================================
+2025-09-05 15:32:03,338 - conftest - INFO - TEST SESSION FINISHED - Exit status: 0
+2025-09-05 15:32:03,339 - conftest - INFO - ================================================================================

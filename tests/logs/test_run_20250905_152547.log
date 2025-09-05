@@ -1,0 +1,27 @@
+2025-09-05 15:25:47,811 | __main__             | INFO     | 🚀 Starting GemCheck test suite
+2025-09-05 15:25:47,819 | __main__             | INFO     | 📝 Log file: C:\Users\dlaev\Personal Projects\PSA PREGRADER\tests\logs\test_run_20250905_152547.log
+2025-09-05 15:25:47,820 | __main__             | INFO     | 🏠 Project root: C:\Users\dlaev\Personal Projects\PSA PREGRADER
+2025-09-05 15:25:47,820 | __main__             | INFO     | 🐍 Python version: 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]
+2025-09-05 15:25:47,821 | __main__             | INFO     | --------------------------------------------------------------------------------
+2025-09-05 15:25:47,821 | __main__             | INFO     | 🔍 Checking imports...
+2025-09-05 15:25:48,074 | __main__             | INFO     | ✅ Basic schema: app.schema
+2025-09-05 15:25:48,104 | __main__             | INFO     | ✅ Centering analysis: app.metrics.centering
+2025-09-05 15:25:48,105 | __main__             | INFO     | ✅ Edges and corners: app.metrics.edges_corners
+2025-09-05 15:25:48,106 | __main__             | INFO     | ✅ Surface analysis: app.metrics.surface
+2025-09-05 15:25:48,107 | __main__             | INFO     | ✅ Glare detection: app.metrics.glare
+2025-09-05 15:25:48,108 | __main__             | INFO     | ✅ Scoring system: app.scoring
+2025-09-05 15:25:48,110 | __main__             | INFO     | ✅ Visualization: app.visualize
+2025-09-05 15:25:48,110 | __main__             | INFO     | ✅ All imports successful
+2025-09-05 15:25:48,111 | __main__             | INFO     | 🧪 Running all tests
+2025-09-05 15:25:48,111 | __main__             | INFO     | 🧪 Running command: C:\Python313\python.exe -m pytest -v -s --tb=long --capture=no --log-cli-level=DEBUG --log-cli-format=%(asctime)s | %(levelname)-8s | %(name)s | %(message)s tests/
+2025-09-05 15:25:48,112 | __main__             | INFO     | --------------------------------------------------------------------------------
+2025-09-05 15:25:48,597 | __main__             | INFO     | --------------------------------------------------------------------------------
+2025-09-05 15:25:48,597 | __main__             | ERROR    | ❌ Tests failed with exit code: 3
+2025-09-05 15:25:48,597 | __main__             | INFO     | ================================================================================
+2025-09-05 15:25:48,598 | __main__             | ERROR    | 💥 TEST SUITE FAILED!
+2025-09-05 15:25:48,598 | __main__             | ERROR    | 📋 Check the logs above for detailed error information
+2025-09-05 15:25:48,599 | __main__             | ERROR    | 🔧 Common fixes:
+2025-09-05 15:25:48,599 | __main__             | ERROR    |   - Check import paths
+2025-09-05 15:25:48,599 | __main__             | ERROR    |   - Verify all required functions exist
+2025-09-05 15:25:48,599 | __main__             | ERROR    |   - Check function signatures match test expectations
+2025-09-05 15:25:48,600 | __main__             | INFO     | ================================================================================

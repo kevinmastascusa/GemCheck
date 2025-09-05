@@ -125,6 +125,11 @@ def analyze_edges(image: np.ndarray, config: Optional[Dict[str, Any]] = None) ->
         # Calculate clean edge percentage
         clean_percentage = max(0.0, 100.0 - whitening_percentage)
         
+        # Calculate edge score (simple formula based on whitening and nicks)
+        whitening_penalty = whitening_percentage * 2  # 2 points per % whitening
+        nick_penalty = nick_count * 5  # 5 points per nick
+        edge_score = max(0.0, 100.0 - whitening_penalty - nick_penalty)
+        
         # Create findings object
         findings = EdgeFindings(
             total_perimeter_px=total_perimeter,
@@ -133,7 +138,8 @@ def analyze_edges(image: np.ndarray, config: Optional[Dict[str, Any]] = None) ->
             nick_count=nick_count,
             largest_nick_area_px=int(largest_nick_area),
             clean_edge_percentage=clean_percentage,
-            whitening_threshold=whitening_threshold
+            whitening_threshold=whitening_threshold,
+            edge_score=edge_score
         )
         
         logger.info("Edge analysis completed successfully")
@@ -148,7 +154,8 @@ def analyze_edges(image: np.ndarray, config: Optional[Dict[str, Any]] = None) ->
             nick_count=999,
             largest_nick_area_px=999,
             clean_edge_percentage=0.0,
-            whitening_threshold=0.15
+            whitening_threshold=0.15,
+            edge_score=0.0
         )
 
 
@@ -227,6 +234,9 @@ def analyze_corners(image: np.ndarray, config: Optional[Dict[str, Any]] = None) 
         # Find minimum corner score
         min_score = min(corner_scores.values()) if corner_scores else 0.0
         
+        # Calculate overall corner score (average of individual corners)
+        overall_corner_score = sum(corner_scores.values()) / len(corner_scores) if corner_scores else 0.0
+        
         # Create findings object
         findings = CornerFindings(
             corner_scores=corner_scores,
@@ -234,7 +244,8 @@ def analyze_corners(image: np.ndarray, config: Optional[Dict[str, Any]] = None) 
             corner_whitening=corner_whitening,
             corner_damage_area=corner_damage_area,
             minimum_corner_score=min_score,
-            sharpness_threshold=sharpness_threshold
+            sharpness_threshold=sharpness_threshold,
+            corner_score=overall_corner_score
         )
         
         logger.info(f"Corner analysis completed, minimum score: {min_score:.2f}")
@@ -249,5 +260,6 @@ def analyze_corners(image: np.ndarray, config: Optional[Dict[str, Any]] = None) 
             corner_whitening={name: 100.0 for name in corner_names},
             corner_damage_area={name: 999 for name in corner_names},
             minimum_corner_score=0.0,
-            sharpness_threshold=0.3
+            sharpness_threshold=0.3,
+            corner_score=0.0
         )

@@ -344,6 +344,9 @@ def analyze_centering(image: np.ndarray, config: Optional[Dict[str, Any]] = None
         # Calculate centering errors
         errors = calculate_centering_errors(margins)
         
+        # Calculate centering score
+        centering_score = calculate_centering_score(errors['combined_error'], max_error_threshold)
+        
         # Create findings object
         findings = CenteringFindings(
             left_margin_px=margins.get('left_px', 0),
@@ -355,7 +358,8 @@ def analyze_centering(image: np.ndarray, config: Optional[Dict[str, Any]] = None
             combined_error=errors['combined_error'],
             max_error_threshold=max_error_threshold,
             inner_frame_detected=frame_detected,
-            detection_method=detection_method
+            detection_method=detection_method,
+            centering_score=centering_score
         )
         
         logger.info("Centering analysis completed successfully")
@@ -374,5 +378,6 @@ def analyze_centering(image: np.ndarray, config: Optional[Dict[str, Any]] = None
             combined_error=1.0,
             max_error_threshold=max_error_threshold,
             inner_frame_detected=False,
-            detection_method=detection_method
+            detection_method=detection_method,
+            centering_score=0.0
         )

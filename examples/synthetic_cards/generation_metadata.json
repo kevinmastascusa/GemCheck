@@ -1,0 +1,14 @@
+{
+  "10": [
+    "examples\\synthetic_cards\\grade_10_card_001.jpg",
+    "examples\\synthetic_cards\\grade_10_card_002.jpg"
+  ],
+  "9": [
+    "examples\\synthetic_cards\\grade_09_card_001.jpg",
+    "examples\\synthetic_cards\\grade_09_card_002.jpg"
+  ],
+  "8": [
+    "examples\\synthetic_cards\\grade_08_card_001.jpg",
+    "examples\\synthetic_cards\\grade_08_card_002.jpg"
+  ]
+}
