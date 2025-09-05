@@ -1,0 +1,13 @@
+# Default scoring weights for PSA-style card grading
+# All weights should sum to 100
+
+centering: 35.0    # Weight for centering score (default: 35%)
+edges: 20.0        # Weight for edge condition score (default: 20%)
+corners: 20.0      # Weight for corner condition score (default: 20%)
+surface: 25.0      # Weight for surface condition score (default: 25%)
+
+# Notes:
+# - Centering is traditionally weighted heavily in card grading
+# - Surface defects can significantly impact value
+# - Edges and corners are equally important for structural integrity
+# - Weights can be adjusted based on card type or era

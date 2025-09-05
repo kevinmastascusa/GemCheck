@@ -1,0 +1,79 @@
+# PSA-style grade mapping and requirements
+
+grades:
+  - numeric: 10
+    label: "Gem Mint 10"
+    description: "Perfect condition card with sharp corners, perfect centering, and pristine surface"
+    min_overall_score: 97.0
+    min_sub_score: 95.0
+    requirements:
+      - "No visible wear or defects"
+      - "Perfect or near-perfect centering"
+      - "Sharp, intact corners"
+      - "Flawless surface with no scratches"
+    
+  - numeric: 9
+    label: "Mint 9"
+    description: "Near-perfect card with very minor imperfections"
+    min_overall_score: 92.0
+    min_sub_score: 88.0
+    requirements:
+      - "Virtually no wear"
+      - "Excellent centering"
+      - "Sharp corners with minimal wear"
+    
+  - numeric: 8
+    label: "NM-Mint 8"
+    description: "Very high quality card with only slight wear"
+    min_overall_score: 85.0
+    min_sub_score: 80.0
+    requirements:
+      - "Very light wear only"
+      - "Good centering"
+      - "Corners showing minimal wear"
+    
+  - numeric: 7
+    label: "Near Mint 7"
+    description: "High quality card with minor wear but no major defects"
+    min_overall_score: 78.0
+    min_sub_score: 72.0
+    requirements:
+      - "Light to moderate wear"
+      - "Centering may be slightly off"
+      - "Corners may show light wear"
+    
+  - numeric: 6
+    label: "Excellent 6"
+    description: "Good condition card with light to moderate wear"
+    min_overall_score: 72.0
+    min_sub_score: 0.0
+    
+  - numeric: 5
+    label: "VG-EX 5"
+    description: "Card showing moderate wear but still collectible"
+    min_overall_score: 66.0
+    min_sub_score: 0.0
+    
+  - numeric: 4
+    label: "Good 4"
+    description: "Card with significant wear but no major damage"
+    min_overall_score: 60.0
+    min_sub_score: 0.0
+    
+  - numeric: 3
+    label: "Fair 3"
+    description: "Card with heavy wear and/or minor damage"
+    min_overall_score: 54.0
+    min_sub_score: 0.0
+    
+  - numeric: 2
+    label: "Poor 2"
+    description: "Card with extensive wear and damage"
+    min_overall_score: 48.0
+    min_sub_score: 0.0
+    
+  - numeric: 1
+    label: "Authentic 1"
+    description: "Card is authentic but in poor condition"
+    min_overall_score: 0.0
+    min_sub_score: 0.0

@@ -1,0 +1,40 @@
+# Detection thresholds and parameters for card analysis
+
+centering:
+  max_error_threshold: 0.25      # Maximum acceptable centering error (0-1)
+  detection_method: "edge_based" # "edge_based" or "color_based"
+
+edges:
+  border_width: 6                # Width of edge region to analyze (pixels)
+  whitening_threshold: 0.15      # Threshold for whitening detection (0-1)
+  acceptable_whitening_percent: 15.0  # Max acceptable whitening percentage
+
+corners:
+  corner_size: 50                # Size of corner analysis region (pixels)
+  sharpness_threshold: 0.3       # Minimum acceptable corner sharpness (0-1)
+  whitening_threshold: 0.15      # Threshold for corner whitening detection
+
+surface:
+  scratch_threshold: 0.02        # Threshold for scratch detection (0-1)
+  min_defect_area: 5            # Minimum defect area to count (pixels)
+  print_line_min_length: 30     # Minimum line length for print line detection
+
+glare:
+  highlight_threshold: 0.8       # Threshold for specular highlight detection (0-1)
+  min_region_area: 100          # Minimum glare region area to consider
+  max_penalty: 10.0             # Maximum penalty points for glare
+
+# Processing parameters
+image:
+  max_size: 2000                # Maximum image dimension for processing
+  target_width: 750             # Target width for rectified cards
+  target_height: 1050           # Target height for rectified cards
+  white_balance: true           # Apply white balance correction
+
+# ML model parameters
+ml:
+  enabled: false                # Enable ML-assisted defect detection
+  model_type: "placeholder"     # Model type: "pytorch", "onnx", "placeholder"
+  model_path: null              # Path to model file (null = use built-in)
+  confidence_threshold: 0.5     # Minimum confidence for ML detections
+  device: "cpu"                 # Device for inference: "cpu" or "cuda"
