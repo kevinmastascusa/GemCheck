@@ -48,8 +48,8 @@
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/psa-card-pregrader.git
-cd psa-card-pregrader
+git clone https://github.com/kevinmastascusa/GemCheck.git
+cd GemCheck
 
 # Create virtual environment
 python -m venv venv
