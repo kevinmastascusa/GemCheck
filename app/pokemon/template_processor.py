@@ -636,7 +636,7 @@ class PokemonCardTemplateProcessor:
             saturation = hsv[:, :, 1]
             value = hsv[:, :, 2]
             
-            holo_mask = cv2.bitwise_and(saturation > 120, value > 150)
+            holo_mask = ((saturation > 120) & (value > 150)).astype(np.uint8) * 255
             
             # Morphological operations to clean up
             kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))

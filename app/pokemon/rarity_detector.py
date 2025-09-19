@@ -309,8 +309,8 @@ class PokemonRarityDetector:
         value = hsv[:, :, 2]
         
         # Gold characteristics: yellow/orange hue with high saturation and brightness
-        hue_mask = cv2.bitwise_and((hue >= 10).astype(np.uint8), (hue <= 40).astype(np.uint8))
-        sat_val_mask = cv2.bitwise_and((saturation > 120).astype(np.uint8), (value > 180).astype(np.uint8))
+        hue_mask = ((hue >= 10) & (hue <= 40)).astype(np.uint8)
+        sat_val_mask = ((saturation > 120) & (value > 180)).astype(np.uint8)
         gold_mask = cv2.bitwise_and(hue_mask, sat_val_mask)
         
         gold_in_holo = cv2.bitwise_and(gold_mask, holo_mask)
@@ -375,7 +375,7 @@ class PokemonRarityDetector:
                 features.has_rainbow_foil = True
             
             # Gold foil detection (yellow/orange hues with high brightness)
-            hue_mask = cv2.bitwise_and((hue >= 15).astype(np.uint8), (hue <= 45).astype(np.uint8))
+            hue_mask = ((hue >= 15) & (hue <= 45)).astype(np.uint8)
             sat_mask = (saturation > 100).astype(np.uint8)
             gold_mask = cv2.bitwise_and(hue_mask, sat_mask)
             gold_coverage = np.sum(gold_mask) / (image.shape[0] * image.shape[1])
@@ -553,7 +553,7 @@ class PokemonRarityDetector:
             saturation = hsv[:, :, 1]
             value = hsv[:, :, 2]
             
-            holo_mask = cv2.bitwise_and(saturation > 100, value > 150)
+            holo_mask = ((saturation > 100) & (value > 150)).astype(np.uint8)
             return np.sum(holo_mask) / (region.shape[0] * region.shape[1])
         except:
             return 0.0

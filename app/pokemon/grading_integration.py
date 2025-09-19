@@ -361,7 +361,7 @@ class HolographicGradingIntegrator:
         saturation = hsv[:, :, 1]
         value = hsv[:, :, 2]
         
-        holo_mask = cv2.bitwise_and(saturation > 80, value > 120)
+        holo_mask = ((saturation > 80) & (value > 120)).astype(np.uint8)
         return np.sum(holo_mask) / (region.shape[0] * region.shape[1])
     
     def _get_holo_coverage_with_mask(self, image: np.ndarray, mask: np.ndarray) -> float:
@@ -370,8 +370,8 @@ class HolographicGradingIntegrator:
         saturation = hsv[:, :, 1]
         value = hsv[:, :, 2]
         
-        holo_mask = cv2.bitwise_and(saturation > 80, value > 120)
-        masked_holo = cv2.bitwise_and(holo_mask, mask)
+        holo_mask = ((saturation > 80) & (value > 120)).astype(np.uint8) * 255
+        masked_holo = cv2.bitwise_and(holo_mask, holo_mask, mask=mask.astype(np.uint8))
         
         mask_area = np.sum(mask > 0)
         if mask_area == 0:

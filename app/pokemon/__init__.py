@@ -94,11 +94,10 @@ def analyze_pokemon_card(image, text_content="", include_holo_analysis=True, use
         except Exception as e:
             print(f"[WARNING] Reference template error: {e}")
     
-    # Run analysis with calibration data
+    # Run analysis (calibration data would be used internally if needed)
     result = integrator.grade_card_with_holo_awareness(
         image, 
-        text_content=text_content,
-        calibration_data=calibration_data
+        text_content=text_content
     )
     
     return result
