@@ -48,33 +48,85 @@ from .grading_integration import (
     HolographicGradingIntegrator, EnhancedGradingResult, HolographicGradingFactors
 )
 
+from .reference_template import (
+    ReferenceTemplateProcessor, ReferenceTemplate, ReferencePoint
+)
+
 __version__ = "1.0.0"
 __author__ = "PSA Pregrader Team"
 
 # Main interface functions
-def analyze_pokemon_card(image, text_content="", include_holo_analysis=True):
+def analyze_pokemon_card(image, text_content="", include_holo_analysis=True, use_reference_template=True):
     """
-    Comprehensive Pokémon card analysis with holographic awareness.
+    Comprehensive Pokémon card analysis with holographic awareness and reference template calibration.
     
     Args:
         image: Card image (numpy array or file path)
         text_content: OCR text from the card
         include_holo_analysis: Whether to include holographic analysis
+        use_reference_template: Whether to use reference template for calibrated grading
         
     Returns:
         Complete analysis results including rarity, defects, and grading
     """
     from .grading_integration import HolographicGradingIntegrator
+    from .reference_template import ReferenceTemplateProcessor
     
-    integrator = HolographicGradingIntegrator()
-    
+    # Load image if path provided
     if isinstance(image, str):
         import cv2
         image = cv2.imread(image)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     
-    result = integrator.grade_card_with_holo_awareness(image, text_content=text_content)
+    # Initialize grading integrator
+    integrator = HolographicGradingIntegrator()
+    
+    # Apply reference template calibration if requested
+    calibration_data = {}
+    if use_reference_template:
+        try:
+            reference_processor = ReferenceTemplateProcessor()
+            calibration_data = reference_processor.calibrate_analysis(image)
+            if calibration_data:
+                print(f"[OK] Reference template calibration applied (scale: x={calibration_data['scale_factors']['x']:.2f}, y={calibration_data['scale_factors']['y']:.2f})")
+            else:
+                print("[WARNING] Reference template calibration failed, using default standards")
+        except Exception as e:
+            print(f"[WARNING] Reference template error: {e}")
+    
+    # Run analysis with calibration data
+    result = integrator.grade_card_with_holo_awareness(
+        image, 
+        text_content=text_content,
+        calibration_data=calibration_data
+    )
+    
     return result
+
+def create_reference_overlay(image, show_reference_points=True):
+    """
+    Create reference template overlay showing calibration points.
+    
+    Args:
+        image: Card image
+        show_reference_points: Whether to show reference measurement points
+        
+    Returns:
+        Image with reference template overlay
+    """
+    from .reference_template import ReferenceTemplateProcessor
+    
+    try:
+        reference_processor = ReferenceTemplateProcessor()
+        calibration_data = reference_processor.calibrate_analysis(image)
+        
+        if calibration_data and show_reference_points:
+            return reference_processor.create_calibrated_overlay(image, calibration_data)
+        else:
+            return image
+    except Exception as e:
+        print(f"Reference overlay error: {e}")
+        return image
 
 def create_holographic_overlay(image, rarity_features, defect_analysis, regions, settings=None):
     """
@@ -167,11 +219,15 @@ __all__ = [
     'HolographicVisualizer', 'HolographicOverlaySettings',
     'HolographicGradingIntegrator', 'EnhancedGradingResult', 'HolographicGradingFactors',
     
+    # Reference template components
+    'ReferenceTemplateProcessor', 'ReferenceTemplate', 'ReferencePoint',
+    
     # Report generation
     'PokemonCardPDFReportGenerator', 'GradingReportData',
     
     # Main interface functions
     'analyze_pokemon_card',
-    'create_holographic_overlay', 
+    'create_holographic_overlay',
+    'create_reference_overlay',
     'generate_pokemon_report'
 ]
