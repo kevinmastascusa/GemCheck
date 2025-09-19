@@ -1,0 +1,85 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 black isort mypy pylint
+    
+    - name: Check code formatting with Black
+      run: |
+        black --check app/ scripts/ tests/ --line-length 100
+      continue-on-error: true
+    
+    - name: Check import sorting with isort
+      run: |
+        isort --check-only --diff app/ scripts/ tests/
+      continue-on-error: true
+    
+    - name: Lint with flake8
+      run: |
+        # Stop the build if there are Python syntax errors or undefined names
+        flake8 app/ scripts/ --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Exit-zero treats all errors as warnings
+        flake8 app/ scripts/ --count --exit-zero --max-complexity=15 --max-line-length=100 --statistics
+    
+    - name: Type checking with mypy
+      run: |
+        mypy app/ --ignore-missing-imports --no-strict-optional
+      continue-on-error: true
+    
+    - name: Lint with pylint
+      run: |
+        pylint app/ --max-line-length=100 --disable=C0114,C0115,C0116,R0903,R0913,W0613
+      continue-on-error: true
+
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install security tools
+      run: |
+        python -m pip install --upgrade pip
+        pip install safety bandit
+    
+    - name: Security check with Safety
+      run: |
+        safety check --json
+      continue-on-error: true
+    
+    - name: Security check with Bandit
+      run: |
+        bandit -r app/ scripts/ -f json -o bandit-report.json
+      continue-on-error: true
+    
+    - name: Upload security reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-reports
+        path: |
+          bandit-report.json
+      if: always()
