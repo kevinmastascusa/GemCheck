@@ -30,7 +30,8 @@
       "Bash(./debug_run.bat)",
       "Bash(where:*)",
       "Bash(npm audit:*)",
-      "Bash(npm i:*)"
+      "Bash(npm i:*)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
