@@ -1,10 +1,17 @@
-# PSA Card Pre-Grader
+# 🏆 GemCheck - Revolutionary PSA Card Pre-Grading System
 
-A comprehensive PSA-style trading card pre-grading application using computer vision and machine learning techniques. Provides transparent, offline analysis with detailed scoring breakdowns and visual evidence overlays.
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.8+-green.svg)
-![Streamlit](https://img.shields.io/badge/streamlit-1.29+-red.svg)
+<div align="center">
+  <img src="resources/GemCheck Logo.png" alt="GemCheck Logo" width="200"/>
+  
+  **The Future of Card Authentication**
+  
+  *Professional PSA-style pre-grading with real-time computational photography overlays*
+  
+  [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+  [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+  [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+  [![OpenCV](https://img.shields.io/badge/OpenCV-4.8+-red)](https://opencv.org/)
+</div>
 
 ## 🎯 Features
 

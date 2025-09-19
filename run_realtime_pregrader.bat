@@ -1,5 +1,8 @@
 @echo off
-echo Starting Real-Time PSA Card Pre-grader...
+echo.
+echo  =====================================
+echo   GemCheck - Real-Time PSA Pre-grader
+echo  =====================================
 echo.
 
 REM Activate virtual environment
@@ -20,11 +23,17 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo.
-echo Starting Real-Time PSA Pre-grader with Camera Feed...
+echo Starting GemCheck Real-Time Analysis...
+echo.
+echo Features:
+echo - Live computational photography overlays
+echo - Real-time centering analysis
+echo - Professional PSA-style grading
+echo - Capture and export functionality
 echo.
 echo Controls:
 echo - Start Camera: Begin live analysis
-echo - Stop Camera: Stop camera feed
+echo - Stop Camera: Stop camera feed  
 echo - Capture & Analyze: Save current analysis
 echo.
 echo Press Ctrl+C or close window to exit

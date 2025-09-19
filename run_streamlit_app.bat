@@ -1,5 +1,8 @@
 @echo off
-echo Starting PSA Card Pre-grader Streamlit App...
+echo.
+echo  ========================================
+echo   GemCheck - PSA Card Pre-grader Web App
+echo  ========================================
 echo.
 
 REM Activate virtual environment
@@ -13,7 +16,13 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo.
-echo Starting Streamlit PSA Pre-grader Web App...
+echo Starting GemCheck Streamlit Web Interface...
+echo.
+echo Features:
+echo - Upload and analyze card images
+echo - Detailed PSA-style grading reports
+echo - Advanced configuration options
+echo - Professional analysis visualizations
 echo.
 echo The app will open in your web browser automatically.
 echo Use Ctrl+C to stop the server.

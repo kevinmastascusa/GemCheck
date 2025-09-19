@@ -1,5 +1,6 @@
 """
-Real-time PSA Card Pre-grader with Live Camera Feed and Computational Photography Overlays
+GemCheck Real-time PSA Card Pre-grader with Live Camera Feed and Computational Photography Overlays
+Revolutionary card authentication with professional-grade analysis
 """
 
 import cv2
@@ -25,11 +26,11 @@ logger = logging.getLogger(__name__)
 
 
 class RealTimePSAPregrader:
-    """Real-time PSA card pre-grader with live camera feed."""
+    """GemCheck Real-time PSA card pre-grader with live camera feed and computational photography overlays."""
     
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Real-Time PSA Card Pre-Grader")
+        self.root.title("GemCheck - Real-Time PSA Card Pre-Grader")
         self.root.geometry("1400x900")
         
         # Camera setup
@@ -69,10 +70,17 @@ class RealTimePSAPregrader:
         main_frame = ttk.Frame(self.root)
         main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
-        # Title
-        title_label = ttk.Label(main_frame, text="Real-Time PSA Card Pre-Grader", 
-                               font=('Arial', 16, 'bold'))
-        title_label.pack(pady=(0, 10))
+        # Title with branding
+        title_frame = ttk.Frame(main_frame)
+        title_frame.pack(pady=(0, 10))
+        
+        title_label = ttk.Label(title_frame, text="GemCheck", 
+                               font=('Arial', 20, 'bold'), foreground='#2E8B57')
+        title_label.pack()
+        
+        subtitle_label = ttk.Label(title_frame, text="Real-Time PSA Card Pre-Grader", 
+                                  font=('Arial', 14))
+        subtitle_label.pack()
         
         # Camera control frame
         control_frame = ttk.Frame(main_frame)

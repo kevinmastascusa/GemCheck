@@ -1,0 +1,182 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relationships
+  analyses CardAnalysis[]
+  uploads  CardUpload[]
+
+  @@map("users")
+}
+
+model PokemonCard {
+  id                   String   @id
+  name                 String
+  set                  String
+  setId                String?
+  number               String
+  rarity               String?
+  artist               String?
+  flavorText           String?
+  hp                   String?
+  types                String[]
+  supertype            String?
+  subtypes             String[]
+  nationalPokedexId    Int?
+  images               Json?    // Store image URLs as JSON
+  abilities            Json?    // Store abilities as JSON
+  attacks              Json?    // Store attacks as JSON
+  weaknesses           Json?    // Store weaknesses as JSON
+  resistances          Json?    // Store resistances as JSON
+  retreatCost          String[]
+  convertedRetreatCost Int?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  // Relationships
+  analyses CardAnalysis[]
+  psaCards PSACard[]
+
+  @@index([name])
+  @@index([setId, number])
+  @@map("pokemon_cards")
+}
+
+model PSACard {
+  id           String   @id @default(cuid())
+  certNumber   String   @unique
+  grade        Int
+  cardName     String
+  setName      String?
+  year         String?
+  cardNumber   String?
+  imageUrl     String?
+  psaUrl       String
+  isVerified   Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relationships
+  pokemonCard   PokemonCard? @relation(fields: [pokemonCardId], references: [id])
+  pokemonCardId String?
+
+  @@index([grade])
+  @@index([certNumber])
+  @@map("psa_cards")
+}
+
+model CardUpload {
+  id              String   @id @default(cuid())
+  fileName        String
+  originalName    String
+  fileSize        Int
+  mimeType        String
+  imageUrl        String
+  thumbnailUrl    String?
+  width           Int?
+  height          Int?
+  uploadedAt      DateTime @default(now())
+
+  // Relationships
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId   String
+  analysis CardAnalysis?
+
+  @@index([userId])
+  @@index([uploadedAt])
+  @@map("card_uploads")
+}
+
+model CardAnalysis {
+  id               String   @id @default(cuid())
+  predictedGrade   Int
+  confidence       Float
+  centeringScore   Float
+  edgesScore       Float
+  cornersScore     Float
+  surfaceScore     Float
+  overallScore     Float
+  defects          Json?    // Store detected defects as JSON
+  recognitionData  Json?    // Store card recognition results
+  processingTime   Int?     // Time taken for analysis in milliseconds
+  analysisVersion  String?  // Version of the analysis algorithm
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relationships
+  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         String
+  upload         CardUpload  @relation(fields: [uploadId], references: [id], onDelete: Cascade)
+  uploadId       String      @unique
+  pokemonCard    PokemonCard @relation(fields: [pokemonCardId], references: [id])
+  pokemonCardId  String
+
+  @@index([userId])
+  @@index([predictedGrade])
+  @@index([confidence])
+  @@index([createdAt])
+  @@map("card_analyses")
+}
+
+model AnalysisSession {
+  id          String   @id @default(cuid())
+  sessionId   String   @unique
+  ipAddress   String?
+  userAgent   String?
+  startTime   DateTime @default(now())
+  endTime     DateTime?
+  totalCards  Int      @default(0)
+  isActive    Boolean  @default(true)
+
+  @@index([sessionId])
+  @@index([startTime])
+  @@map("analysis_sessions")
+}
+
+model SystemMetrics {
+  id                String   @id @default(cuid())
+  totalAnalyses     Int      @default(0)
+  totalUsers        Int      @default(0)
+  totalUploads      Int      @default(0)
+  averageGrade      Float?
+  averageConfidence Float?
+  popularCards      Json?    // Store popular card statistics
+  recordedAt        DateTime @default(now())
+
+  @@index([recordedAt])
+  @@map("system_metrics")
+}
+
+model CardTemplate {
+  id           String   @id @default(cuid())
+  name         String
+  set          String
+  templateData Json     // Store template matching data
+  checkpoints  Json     // Store template checkpoints for recognition
+  accuracy     Float?
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([set])
+  @@index([isActive])
+  @@map("card_templates")
+}
