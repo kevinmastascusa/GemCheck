@@ -1,5 +1,10 @@
 """
 Pokémon card analysis package with comprehensive holographic awareness.
+
+Data Attribution:
+This package uses official Pokémon TCG data from the PokemonTCG/pokemon-tcg-data repository
+(https://github.com/PokemonTCG/pokemon-tcg-data) under MIT License for card identification,
+set information, and game mechanics data.
 """
 
 from .card_types import (

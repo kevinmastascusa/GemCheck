@@ -64,10 +64,10 @@ pip install -r requirements.txt
 ### Run Application
 
 ```bash
-streamlit run app/main.py
+python run.py
 ```
 
-Open your browser to `http://localhost:8501` and start grading cards!
+The application will automatically start and display the URL. Open your browser to `http://localhost:8501` and start grading cards!
 
 ### Generate Test Cards
 
@@ -253,6 +253,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - OpenCV community for computer vision tools
 - Streamlit team for the excellent web framework
 - PyTorch team for machine learning capabilities
+- **[PokemonTCG/pokemon-tcg-data](https://github.com/PokemonTCG/pokemon-tcg-data)** - Official Pokémon TCG data repository providing comprehensive card information, sets, rarities, and mechanics data under MIT License
 
 ## ⚠️ Disclaimer
 

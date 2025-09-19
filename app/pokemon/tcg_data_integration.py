@@ -1,6 +1,16 @@
 """
-Integration with official Pokémon TCG data from https://github.com/PokemonTCG/pokemon-tcg-data
-Provides comprehensive card information for accurate grading and identification.
+Integration with official Pokémon TCG data.
+
+Data Source Attribution:
+- Official Pokémon TCG Data Repository: https://github.com/PokemonTCG/pokemon-tcg-data
+- Maintained by: Pokémon TCG Developers
+- License: MIT License
+- Description: Comprehensive database of Pokémon Trading Card Game cards
+- Credit: This module uses data from the PokemonTCG/pokemon-tcg-data repository
+  which provides official card information including sets, rarities, and mechanics.
+
+This integration provides comprehensive card information for accurate grading and identification
+while respecting the original data source licensing and attribution requirements.
 """
 
 import json
